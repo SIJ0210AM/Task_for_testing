@@ -5,9 +5,9 @@ import org.apache.commons.lang3.concurrent.TimedSemaphore;
 
 @Slf4j
 public class DocumentCreatorThread implements Runnable {
-    private TimedSemaphore semaphore;
-    private String name;
-    private Document document;
+    private final TimedSemaphore semaphore;
+    private final String name;
+    private final Document document;
 
     public DocumentCreatorThread(TimedSemaphore semaphore, String name, Document document) {
         this.semaphore = semaphore;
